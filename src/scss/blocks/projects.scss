@@ -1,0 +1,29 @@
+@use '../mixins/responsive.scss' as*;
+
+.project__grid {
+    display: grid;
+    grid-template-columns: 342px;
+    gap: 2.5rem;
+
+    @include responsive(tablet) {
+        grid-template-columns: 342px 342px;
+        gap: 1.5rem;
+    }
+
+    @include responsive(desktop) {
+        grid-template-columns: 546px 546px;
+        gap: 2rem;
+    }
+}
+
+.captura {
+    width: 342px;
+    height: 253px;
+    background-color: rgb(128, 128, 255);
+
+    @include responsive(desktop) {
+        width: 546px;
+        height: 400px;
+
+    }
+}
