@@ -366,6 +366,8 @@ a {
 
 body {
   font-family: sans-serif;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .project__title {
@@ -390,18 +392,26 @@ body {
   display: grid;
   grid-template-columns: 342px;
   gap: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 640px) {
   .project__grid {
+    width: 700px;
     grid-template-columns: 342px 342px;
     gap: 1.5rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .project__grid {
+    width: 1124px;
     grid-template-columns: 546px 546px;
     gap: 2rem;
   }
+}
+
+.project {
+  position: relative;
 }
 
 .captura {
@@ -413,5 +423,25 @@ body {
   .captura {
     width: 546px;
     height: 400px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .project__links {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .project:hover > .project__links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 546px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }
