@@ -1,6 +1,6 @@
 @use '../mixins/responsive.scss' as*;
 
-.project__grid {
+.project-grid {
     display: grid;
     grid-template-columns: 342px;
     gap: 2.5rem;
@@ -22,6 +22,16 @@
 
 .project {
     position: relative;
+
+    @include responsive(desktop) {
+        width: 546px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
 }
 
 .captura {
@@ -32,26 +42,31 @@
     @include responsive(desktop) {
         width: 546px;
         height: 400px;
-
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
     }
+}
+
+.project__title {
+    @include responsive(desktop) {
+        transition: transform 300ms;
+    }
+
 }
 
 .project__links {
     @include responsive(desktop) {
-        display: none;
+        opacity: 0;
+        transition: transform 300ms 150ms ease-in-out, opacity 300ms 150ms;
     }
 }
 
+.project:hover>.project__title,
 .project:hover>.project__links {
     @include responsive(desktop) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 546px;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.2);
+        transform: translateY(-1rem);
+        opacity: 1;
     }
 }
