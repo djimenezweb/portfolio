@@ -1,0 +1,23 @@
+@use '../mixins/responsive.scss' as*;
+
+.skills {
+    padding: 0 1rem 0;
+
+    @include responsive(tablet) {
+        padding: 0 2rem 0;
+    }
+
+    @include responsive(desktop) {
+        padding: 0 10rem 0;
+    }
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.skill {
+    font-size: 2rem;
+}

@@ -1,5 +1,17 @@
 @use '../mixins/responsive.scss' as*;
 
+.projects {
+    padding: 0 1rem 0;
+
+    @include responsive(tablet) {
+        padding: 0 2rem 0;
+    }
+
+    @include responsive(desktop) {
+        padding: 0 10rem 0;
+    }
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: 342px;
@@ -31,6 +43,8 @@
         justify-content: flex-end;
         align-items: flex-start;
         padding-left: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -38,6 +52,7 @@
     width: 342px;
     height: 253px;
     background-color: rgb(128, 128, 255);
+    border-radius: 1rem;
 
     @include responsive(desktop) {
         width: 546px;
