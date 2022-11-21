@@ -4,18 +4,24 @@
     width: 300px;
     display: flex;
     flex-direction: column;
+
+    &__input,
+    &__textarea,
+    &__submit {
+        padding: .5rem;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+    }
+
+    &__textarea {
+        resize: none;
+    }
 }
 
-.form__input,
-.form__textarea,
-.form__submit {
-    padding: .5rem;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid black;
-    margin-bottom: 1rem;
-}
-
-.form__textarea {
-    resize: none;
+.form__input::placeholder,
+.form__textarea::placeholder,
+.form__submit::placeholder {
+    color: red;
 }

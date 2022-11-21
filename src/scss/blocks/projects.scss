@@ -1,32 +1,20 @@
 @use '../mixins/responsive.scss' as*;
 
 .projects {
-    padding: 0 1rem 0;
-
-    @include responsive(tablet) {
-        padding: 0 2rem 0;
-    }
-
-    @include responsive(desktop) {
-        padding: 0 10rem 0;
-    }
+    padding: 1rem 0;
 }
 
 .project-grid {
     display: grid;
     grid-template-columns: 342px;
     gap: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
 
     @include responsive(tablet) {
-        width: 700px;
         grid-template-columns: 342px 342px;
         gap: 1.5rem;
     }
 
     @include responsive(desktop) {
-        width: 1124px;
         grid-template-columns: 546px 546px;
         gap: 2rem;
     }

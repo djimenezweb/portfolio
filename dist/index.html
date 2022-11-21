@@ -8,24 +8,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/38ea7ba7bc.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/styles.css" />
   <title>Daniel Jiménez</title>
 </head>
 
 <body>
-  <header class="header">
-    <nav>
-      <ul class="menu">
-        <li class="menu__item">
-          <a href="#" class="menu__link">Item de ejemplo</a>
-        </li>
-      </ul>
-    </nav>
+  <header class="header max-width">
+    <div class="header-content">
+      <div class="logo"><i class="fa-solid fa-code"></i>&lt;danieljimenez/&gt;</div>
+      <nav>
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="#" class="menu__link"><i class="menu__icon fa-brands fa-github"></i></a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"><i class="menu__icon fa-brands fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="main">
 
+    <section class="about-me max-width">
+      (Sobre mí)
+    </section>
+
     <section class="skills">
-      <div class="skill-grid">
+      <div class="skill-grid max-width">
         <div class="skill">HTML</div>
         <div class="skill">CSS</div>
         <div class="skill">JavaScript</div>
@@ -36,9 +47,25 @@
       </div>
     </section>
 
-    <section class="projects">
+    <section class="projects max-width">
       <h2 class="section-title">Proyectos</h2>
       <div class="project-grid">
+        <div class="project">
+          <div class="captura"></div>
+          <h3 class="project__title">Título</h3>
+          <div class="project__links">
+            <a href="#" class="project__link">Ver proyecto</a>
+            <a href="#" class="project__link">Ver código</a>
+          </div>
+        </div>
+        <div class="project">
+          <div class="captura"></div>
+          <h3 class="project__title">Título</h3>
+          <div class="project__links">
+            <a href="#" class="project__link">Ver proyecto</a>
+            <a href="#" class="project__link">Ver código</a>
+          </div>
+        </div>
         <div class="project">
           <div class="captura"></div>
           <h3 class="project__title">Título</h3>
@@ -76,13 +103,32 @@
 
   </main>
   <footer class="footer">
-    <h2 class="section-title">Contacto</h2>
-    <form class="form">
-      <input class="form__input" type="text" name="nombre" placeholder="Nombre">
-      <input class="form__input" type="email" name="email" placeholder="email">
-      <textarea class="form__textarea" name="mensaje" placeholder="Mensaje"></textarea>
-      <input class="form__submit" type="submit" value="Enviar">
-    </form>
+    <div class="footer-content max-width">
+      <h2 class="section-title">Contacto</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia consequatur porro dicta? Assumenda veritatis
+        corrupti ab nisi odit commodi, optio nemo. Odio nobis laboriosam voluptatum eligendi inventore esse illum
+        voluptate.</p>
+      <form class="form">
+        <input class="form__input" type="text" name="nombre" placeholder="Nombre">
+        <input class="form__input" type="email" name="email" placeholder="email">
+        <textarea class="form__textarea" name="mensaje" placeholder="Mensaje"></textarea>
+        <input class="form__submit" type="submit" value="Enviar">
+      </form>
+    </div>
+
+    <div class="footer__links max-width">
+      <div class="logo"><i class="fa-solid fa-code"></i>&lt;danieljimenez/&gt;</div>
+
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="#" class="menu__link"><i class="menu__icon fa-brands fa-github"></i></a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link"><i class="menu__icon fa-brands fa-linkedin"></i></a>
+        </li>
+      </ul>
+
+    </div>
   </footer>
 </body>
 

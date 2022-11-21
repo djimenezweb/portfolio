@@ -1,5 +1,22 @@
 @use '../mixins/responsive.scss' as*;
 
 .footer {
-    background-color: antiquewhite;
+    background-color: rgb(128, 128, 255);
+
+    &__links {
+        height: 120px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__links::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        top: 0;
+    }
 }
