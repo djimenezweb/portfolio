@@ -2,7 +2,9 @@
 
 .skills {
     position: relative;
-    background-color: gray;
+    background-color: #1a7f78;
+    background-image: linear-gradient(120deg, #255b98, #1a7f78);
+    ;
     padding: 2rem 0;
 
     @include responsive(tablet) {
@@ -27,6 +29,7 @@
 }
 
 .skill {
+    color: white;
     font-size: 2rem;
     text-align: center;
     padding: 1rem;

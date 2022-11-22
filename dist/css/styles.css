@@ -378,7 +378,11 @@ body {
   }
 }
 
+.header {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
 .header-content {
+  height: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -391,10 +395,7 @@ body {
 }
 
 .logo {
-  width: 400px;
-  height: 60px;
-  background-color: lightgrey;
-  font-size: 2.5rem;
+  width: 300px;
 }
 
 .menu {
@@ -415,7 +416,8 @@ body {
 
 .skills {
   position: relative;
-  background-color: gray;
+  background-color: #1a7f78;
+  background-image: linear-gradient(120deg, #255b98, #1a7f78);
   padding: 2rem 0;
 }
 @media screen and (min-width: 640px) {
@@ -443,6 +445,7 @@ body {
 }
 
 .skill {
+  color: white;
   font-size: 2rem;
   text-align: center;
   padding: 1rem;

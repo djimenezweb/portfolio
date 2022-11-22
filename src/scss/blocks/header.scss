@@ -1,8 +1,10 @@
 @use '../mixins/responsive.scss' as*;
 
 .header {
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
 
     &-content {
+        height: 80px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -18,8 +20,6 @@
 }
 
 .logo {
-    width: 400px;
-    height: 60px;
-    background-color: lightgrey;
-    font-size: 2.5rem;
+    width: 300px;
+
 }
