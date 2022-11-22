@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/38ea7ba7bc.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
   <title>Daniel Jiménez</title>
 </head>
@@ -49,50 +52,74 @@
 
     <section class="projects max-width">
       <h2 class="section-title">Proyectos</h2>
-      <div class="project-grid">
+      <div id="project-grid" class="project-grid">
         <div class="project">
-          <div class="captura"></div>
-          <h3 class="project__title">Título</h3>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="assets/images/desktop/loopstudios.jpg">
+            <source media="(min-width: 300px)" srcset="assets/images/mobile/loopstudios.jpg">
+            <img class="project__image" src="assets/images/desktop/loopstudios.jpg">
+          </picture>
+          <h3 class="project__title">Loopstudios</h3>
           <div class="project__links">
             <a href="#" class="project__link">Ver proyecto</a>
             <a href="#" class="project__link">Ver código</a>
           </div>
         </div>
         <div class="project">
-          <div class="captura"></div>
-          <h3 class="project__title">Título</h3>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="assets/images/desktop/blogr.jpg">
+            <source media="(min-width: 300px)" srcset="assets/images/mobile/blogr.jpg">
+            <img class="project__image" src="assets/images/desktop/blogr.jpg">
+          </picture>
+          <h3 class="project__title">Blogr</h3>
           <div class="project__links">
             <a href="#" class="project__link">Ver proyecto</a>
             <a href="#" class="project__link">Ver código</a>
           </div>
         </div>
         <div class="project">
-          <div class="captura"></div>
-          <h3 class="project__title">Título</h3>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="assets/images/desktop/insure.jpg">
+            <source media="(min-width: 300px)" srcset="assets/images/mobile/insure.jpg">
+            <img class="project__image" src="assets/images/desktop/insure.jpg">
+          </picture>
+          <h3 class="project__title">Insure</h3>
           <div class="project__links">
             <a href="#" class="project__link">Ver proyecto</a>
             <a href="#" class="project__link">Ver código</a>
           </div>
         </div>
         <div class="project">
-          <div class="captura"></div>
-          <h3 class="project__title">Título</h3>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="assets/images/desktop/clipboard.jpg">
+            <source media="(min-width: 300px)" srcset="assets/images/mobile/clipboard.jpg">
+            <img class="project__image" src="assets/images/desktop/clipboard.jpg">
+          </picture>
+          <h3 class="project__title">Clipboard</h3>
           <div class="project__links">
             <a href="#" class="project__link">Ver proyecto</a>
             <a href="#" class="project__link">Ver código</a>
           </div>
         </div>
         <div class="project">
-          <div class="captura"></div>
-          <h3 class="project__title">Título</h3>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="assets/images/desktop/huddle.jpg">
+            <source media="(min-width: 300px)" srcset="assets/images/mobile/huddle.jpg">
+            <img class="project__image" src="assets/images/desktop/huddle.jpg">
+          </picture>
+          <h3 class="project__title">Huddle</h3>
           <div class="project__links">
             <a href="#" class="project__link">Ver proyecto</a>
             <a href="#" class="project__link">Ver código</a>
           </div>
         </div>
         <div class="project">
-          <div class="captura"></div>
-          <h3 class="project__title">Título</h3>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="assets/images/desktop/huddle-curved.jpg">
+            <source media="(min-width: 300px)" srcset="assets/images/mobile/huddle-curved.jpg">
+            <img class="project__image" src="assets/images/desktop/huddle-curved.jpg">
+          </picture>
+          <h3 class="project__title">Huddle (curved)</h3>
           <div class="project__links">
             <a href="#" class="project__link">Ver proyecto</a>
             <a href="#" class="project__link">Ver código</a>
@@ -103,16 +130,19 @@
 
   </main>
   <footer class="footer">
-    <div class="footer-content max-width">
-      <h2 class="section-title">Contacto</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia consequatur porro dicta? Assumenda veritatis
-        corrupti ab nisi odit commodi, optio nemo. Odio nobis laboriosam voluptatum eligendi inventore esse illum
-        voluptate.</p>
+    <div class="footer__content max-width">
+      <div class="footer__info">
+        <h2 class="section-title">Contacto</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia consequatur porro dicta? Assumenda
+          veritatis
+          corrupti ab nisi odit commodi, optio nemo. Odio nobis laboriosam voluptatum eligendi inventore esse illum
+          voluptate.</p>
+      </div>
       <form class="form">
-        <input class="form__input" type="text" name="nombre" placeholder="Nombre">
+        <input class="form__input" type="text" name="nombre" placeholder="nombre">
         <input class="form__input" type="email" name="email" placeholder="email">
-        <textarea class="form__textarea" name="mensaje" placeholder="Mensaje"></textarea>
-        <input class="form__submit" type="submit" value="Enviar">
+        <textarea class="form__textarea" name="mensaje" placeholder="mensaje"></textarea>
+        <input class="form__submit" type="submit" value="enviar">
       </form>
     </div>
 
@@ -130,6 +160,7 @@
 
     </div>
   </footer>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 @use '../mixins/responsive.scss' as*;
+@use '../mixins/pseudo.scss' as*;
 
 .projects {
     padding: 1rem 0;
@@ -24,6 +25,8 @@
     position: relative;
 
     @include responsive(desktop) {
+        color: white;
+        overflow: hidden;
         width: 546px;
         height: 400px;
         display: flex;
@@ -31,38 +34,59 @@
         justify-content: flex-end;
         align-items: flex-start;
         padding-left: 1rem;
+        box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+    }
+
+    &::before {
+        @include responsive(desktop) {
+            @include pseudo(100%, 100%) {
+                background-image: linear-gradient(15deg, rgba(0, 0, 0, 0.4) 10%, transparent 60%);
+                top: 0;
+                left: 0;
+            }
+        }
+
+    }
+
+    &__image {
         border-radius: 1rem;
         box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
-    }
-}
 
-.captura {
-    width: 342px;
-    height: 253px;
-    background-color: rgb(128, 128, 255);
-    border-radius: 1rem;
 
-    @include responsive(desktop) {
-        width: 546px;
-        height: 400px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-}
-
-.project__title {
-    @include responsive(desktop) {
-        transition: transform 300ms;
+        @include responsive(desktop) {
+            box-shadow: none;
+            width: 546px;
+            object-fit: cover;
+            object-position: top;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: translateY(0);
+            transition: transform var(--transition-velocity) linear;
+        }
     }
 
-}
 
-.project__links {
-    @include responsive(desktop) {
-        opacity: 0;
-        transition: transform 300ms 150ms ease-in-out, opacity 300ms 150ms;
+    &__title {
+        @include responsive(desktop) {
+            margin-bottom: 1rem;
+            font-size: 2.25rem;
+            transition: transform 300ms;
+            position: relative;
+            z-index: 1;
+        }
+
+    }
+
+    &__links {
+        @include responsive(desktop) {
+            opacity: 0;
+            transition: transform 300ms 150ms ease-in-out, opacity 300ms 150ms;
+            position: relative;
+            z-index: 1;
+        }
     }
 }
 
@@ -71,5 +95,11 @@
     @include responsive(desktop) {
         transform: translateY(-1rem);
         opacity: 1;
+    }
+}
+
+.project:hover .project__image {
+    @include responsive(desktop) {
+        transform: translateY(calc(-100% + 400px));
     }
 }

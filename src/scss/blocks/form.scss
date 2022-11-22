@@ -1,7 +1,7 @@
 @use '../mixins/responsive.scss' as*;
 
 .form {
-    width: 300px;
+    width: 400px;
     display: flex;
     flex-direction: column;
 
@@ -18,10 +18,15 @@
     &__textarea {
         resize: none;
     }
-}
 
-.form__input::placeholder,
-.form__textarea::placeholder,
-.form__submit::placeholder {
-    color: red;
+
+    &__input::placeholder,
+    &__textarea::placeholder,
+    &__submit::placeholder {
+        color: black;
+    }
+
+    &__submit {
+        text-align: right;
+    }
 }

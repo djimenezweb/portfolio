@@ -365,7 +365,8 @@ a {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
 }
 
 .section-title {
@@ -414,7 +415,7 @@ body {
 
 .skills {
   position: relative;
-  background-color: rgb(128, 128, 255);
+  background-color: gray;
   padding: 2rem 0;
 }
 @media screen and (min-width: 640px) {
@@ -480,6 +481,8 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .project {
+    color: white;
+    overflow: hidden;
     width: 546px;
     height: 400px;
     display: flex;
@@ -487,38 +490,54 @@ body {
     justify-content: flex-end;
     align-items: flex-start;
     padding-left: 1rem;
-    border-radius: 1rem;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
   }
 }
-
-.captura {
-  width: 342px;
-  height: 253px;
-  background-color: rgb(128, 128, 255);
+@media screen and (min-width: 1440px) {
+  .project::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(15deg, rgba(0, 0, 0, 0.4) 10%, transparent 60%);
+    top: 0;
+    left: 0;
+  }
+}
+.project__image {
   border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 1440px) {
-  .captura {
+  .project__image {
+    box-shadow: none;
     width: 546px;
-    height: 400px;
+    object-fit: cover;
+    object-position: top;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    transform: translateY(0);
+    transition: transform var(--transition-velocity) linear;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .project__title {
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
     transition: transform 300ms;
+    position: relative;
+    z-index: 1;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .project__links {
     opacity: 0;
     transition: transform 300ms 150ms ease-in-out, opacity 300ms 150ms;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -530,8 +549,22 @@ body {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .project:hover .project__image {
+    transform: translateY(calc(-100% + 400px));
+  }
+}
+
 .footer {
   background-color: rgb(128, 128, 255);
+  padding-top: 6rem;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__info {
+  width: 400px;
 }
 .footer__links {
   height: 120px;
@@ -550,7 +583,7 @@ body {
 }
 
 .form {
-  width: 300px;
+  width: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -564,11 +597,11 @@ body {
 .form__textarea {
   resize: none;
 }
-
-.form__input::placeholder,
-.form__textarea::placeholder,
-.form__submit::placeholder {
-  color: red;
+.form__input::placeholder, .form__textarea::placeholder, .form__submit::placeholder {
+  color: black;
+}
+.form__submit {
+  text-align: right;
 }
 
 .max-width {
