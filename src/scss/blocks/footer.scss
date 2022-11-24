@@ -1,7 +1,8 @@
 @use '../mixins/responsive.scss' as*;
 
 .footer {
-    background-color: rgb(128, 128, 255);
+    background-color: #9458f0;
+    background-image: linear-gradient(120deg, #9458f0, #4f41f1);
     padding-top: 6rem;
 
     &__title {

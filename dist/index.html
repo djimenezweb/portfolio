@@ -34,7 +34,14 @@
   </header>
   <main class="main">
 
-    <section class="about-me max-width">
+    <section class="about-me">
+      <div class="about-me__info max-width">
+        <h1 class="about-me__name">Daniel Jiménez</h1>
+        <h2 class="about-me__position">Programador Frontend</h2>
+        <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+          laboriosam illo necessitatibus reiciendis nisi inventore iusto eum perspiciatis quas. Illo tempore cumque
+          perspiciatis eum nisi impedit praesentium ut dolor modi?</div>
+      </div>
 
     </section>
 
@@ -138,17 +145,18 @@
           corrupti ab nisi odit commodi, optio nemo. Odio nobis laboriosam voluptatum eligendi inventore esse illum
           voluptate.</p>
       </div>
-      <form class="form">
+      <form id="form" class="form">
         <input class="form__input" type="text" name="nombre" placeholder="nombre">
         <input class="form__input" type="email" name="email" placeholder="email">
         <textarea class="form__textarea" name="mensaje" placeholder="mensaje"></textarea>
-        <input class="form__submit" type="submit" value="enviar">
+        <i id="form-submit" class="button fa-solid fa-paper-plane"></i>
+        <!--<input class="form__submit button" type="submit" value="ENVIAR">-->
+
       </form>
     </div>
 
-    <div class="footer__links">
+    <div class="footer__links max-width">
       <div class="logo"><i class="fa-solid fa-code"></i>&lt;danieljimenez/&gt;</div>
-
       <ul class="menu">
         <li class="menu__item">
           <a href="#" class="menu__link"><i class="menu__icon fa-brands fa-github"></i></a>

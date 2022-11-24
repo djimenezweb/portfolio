@@ -1,14 +1,13 @@
 @use '../mixins/responsive.scss' as*;
 
 .menu {
-
     min-width: 80px;
     height: 40px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 1rem;
-
+    color: black;
 
     &__icon {
         font-size: 2rem;
