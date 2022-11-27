@@ -11,11 +11,13 @@
         flex-direction: column;
         align-items: center;
 
-        @include responsive(desktop) {
+        @include responsive(tablet) {
             flex-direction: row-reverse;
             gap: 4rem;
         }
     }
+
+    &__text-container {}
 
     &__name {
         margin: 0;
@@ -35,7 +37,13 @@
 
     &__image-container {
         position: relative;
+
+        @include responsive(tablet) {
+            min-width: 250px;
+            min-height: 250px;
+        }
     }
+
 
     &__image-container::before {
         border-radius: 50%;
