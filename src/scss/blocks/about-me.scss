@@ -1,0 +1,63 @@
+@use '../mixins/responsive.scss' as*;
+
+.about-me {
+    background-color: #9458f0;
+    background-image: linear-gradient(120deg, #4f41f1, #9458f0);
+    margin-bottom: 3rem;
+
+    &__info {
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include responsive(desktop) {
+            flex-direction: row-reverse;
+            gap: 4rem;
+        }
+    }
+
+    &__name {
+        margin: 0;
+        font-size: 3rem;
+        color: white;
+    }
+
+    &__position {
+        margin: 0;
+        font-size: 4rem;
+        color: #ff9e01;
+    }
+
+    &__retrato {
+        border-radius: 50%;
+    }
+
+    &__image-container {
+        position: relative;
+    }
+
+    &__image-container::before {
+        border-radius: 50%;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 112, 0, 0.1);
+        z-index: 1;
+    }
+
+    &__image-container::after {
+        border-radius: 50%;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        outline: .5rem solid white;
+        z-index: 100;
+    }
+}
