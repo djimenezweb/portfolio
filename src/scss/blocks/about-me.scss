@@ -7,17 +7,7 @@
 
     &__info {
         padding: 3rem 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        @include responsive(tablet) {
-            flex-direction: row-reverse;
-            gap: 4rem;
-        }
     }
-
-    &__text-container {}
 
     &__name {
         margin: 0;
@@ -31,41 +21,4 @@
         color: #ff9e01;
     }
 
-    &__retrato {
-        border-radius: 50%;
-    }
-
-    &__image-container {
-        position: relative;
-
-        @include responsive(tablet) {
-            min-width: 250px;
-            min-height: 250px;
-        }
-    }
-
-
-    &__image-container::before {
-        border-radius: 50%;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 112, 0, 0.1);
-        z-index: 1;
-    }
-
-    &__image-container::after {
-        border-radius: 50%;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        outline: .5rem solid white;
-        z-index: 100;
-    }
 }

@@ -63,7 +63,7 @@
             left: 0;
             z-index: -1;
             transform: translateY(0);
-            transition: transform 10s linear;
+            transition: transform 12s linear;
         }
     }
 
@@ -102,6 +102,7 @@
 
     &__links {
         @include responsive(desktop) {
+            padding-left: 2rem;
             opacity: 0;
             transition: transform 300ms 150ms ease-in-out, opacity 300ms 150ms;
             position: relative;

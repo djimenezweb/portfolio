@@ -435,15 +435,6 @@ body {
 }
 .about-me__info {
   padding: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media screen and (min-width: 640px) {
-  .about-me__info {
-    flex-direction: row-reverse;
-    gap: 4rem;
-  }
 }
 .about-me__name {
   margin: 0;
@@ -454,40 +445,6 @@ body {
   margin: 0;
   font-size: 4rem;
   color: #ff9e01;
-}
-.about-me__retrato {
-  border-radius: 50%;
-}
-.about-me__image-container {
-  position: relative;
-}
-@media screen and (min-width: 640px) {
-  .about-me__image-container {
-    min-width: 250px;
-    min-height: 250px;
-  }
-}
-.about-me__image-container::before {
-  border-radius: 50%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 112, 0, 0.1);
-  z-index: 1;
-}
-.about-me__image-container::after {
-  border-radius: 50%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  outline: 0.5rem solid white;
-  z-index: 100;
 }
 
 .skills {
@@ -602,7 +559,7 @@ body {
     left: 0;
     z-index: -1;
     transform: translateY(0);
-    transition: transform 10s linear;
+    transition: transform 12s linear;
   }
 }
 .project__title {
@@ -637,6 +594,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .project__links {
+    padding-left: 2rem;
     opacity: 0;
     transition: transform 300ms 150ms ease-in-out, opacity 300ms 150ms;
     position: relative;
