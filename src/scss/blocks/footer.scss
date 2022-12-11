@@ -24,16 +24,28 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 2rem;
 
         @include responsive(desktop) {
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
+            margin-bottom: 4rem;
         }
     }
 
     &__info {
-        width: 400px;
+        @include responsive(desktop) {
+            width: 400px;
+        }
+    }
+
+    &__logo {
+        width: 200px;
+
+        @include responsive(desktop) {
+            width: 300px;
+        }
     }
 
     &__links {

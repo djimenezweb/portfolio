@@ -7,18 +7,35 @@
 
     &__info {
         padding: 3rem 0;
+        text-align: center;
+
+        @include responsive(desktop) {
+            text-align: left;
+        }
     }
 
     &__name {
         margin: 0;
-        font-size: 3rem;
+        font-size: 2rem;
         color: white;
+
+        @include responsive(desktop) {
+            font-size: 3rem;
+        }
     }
 
     &__position {
         margin: 0;
-        font-size: 4rem;
+        font-size: 3rem;
         color: #ff9e01;
+
+        @include responsive(desktop) {
+            font-size: 4rem;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
     }
 
 }

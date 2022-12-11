@@ -361,7 +361,7 @@ a {
 }
 
 * {
-  outline: 1px dashed rgba(255, 0, 0, 0.4);
+  outline: 0px dashed rgba(255, 0, 0, 0.4);
 }
 
 body {
@@ -388,6 +388,13 @@ body {
   }
 }
 
+.text {
+  font-size: 1.5rem;
+}
+.text--link:hover {
+  text-decoration: underline;
+}
+
 .button {
   background-image: linear-gradient(to right, #f1468f, #f17446);
   padding: 0.5rem;
@@ -399,15 +406,21 @@ body {
   margin-bottom: 6rem;
 }
 .header-content {
-  height: 80px;
+  height: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 640px) {
   .header-content {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header-content {
+    height: 80px;
   }
 }
 
@@ -427,6 +440,9 @@ body {
 .menu__icon {
   font-size: 2rem;
 }
+.menu__link--white {
+  color: white;
+}
 
 .about-me {
   background-color: #9458f0;
@@ -435,16 +451,35 @@ body {
 }
 .about-me__info {
   padding: 3rem 0;
+  text-align: center;
+}
+@media screen and (min-width: 1440px) {
+  .about-me__info {
+    text-align: left;
+  }
 }
 .about-me__name {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
+}
+@media screen and (min-width: 1440px) {
+  .about-me__name {
+    font-size: 3rem;
+  }
 }
 .about-me__position {
   margin: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #ff9e01;
+}
+@media screen and (min-width: 1440px) {
+  .about-me__position {
+    font-size: 4rem;
+  }
+}
+.about-me__text {
+  font-size: 2rem;
 }
 
 .skills {
@@ -504,7 +539,7 @@ body {
 }
 @media screen and (min-width: 640px) {
   .project-grid {
-    grid-template-columns: 342px 342px;
+    grid-template-columns: 300px 300px;
     gap: 1.5rem;
   }
 }
@@ -564,13 +599,13 @@ body {
 }
 .project__title {
   position: relative;
-  margin: 0 0 0.5rem 0;
+  margin: 0 auto 0.5rem auto;
   padding: 0.5rem 2rem;
   border-radius: 0 2rem 2rem 0;
 }
 @media screen and (min-width: 1440px) {
   .project__title {
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
     font-size: 2rem;
     transition: transform 300ms;
     position: relative;
@@ -587,25 +622,42 @@ body {
   bottom: 0;
   left: 0;
   padding: 0.5rem 2rem;
-  border-radius: 0 2rem 2rem 0;
+  border-radius: 2rem;
   z-index: -1;
-  transform-origin: top left;
-  transition: transform 300ms;
+}
+@media screen and (min-width: 1440px) {
+  .project__title::before {
+    border-radius: 0 2rem 2rem 0;
+    transform-origin: top left;
+    transition: transform 300ms;
+  }
+}
+.project__links {
+  color: black;
+  margin-inline: auto;
 }
 @media screen and (min-width: 1440px) {
   .project__links {
+    margin: 0;
     padding-left: 2rem;
     opacity: 0;
     transition: transform 300ms 150ms ease-in-out, opacity 300ms 150ms;
     position: relative;
     z-index: 1;
+    color: white;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .project:hover > .project__title,
-.project:hover > .project__links {
+  .project:hover > .project__title {
     transform: translateY(-1rem);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .project:hover > .project__links {
+    transform: translateY(-2rem);
     opacity: 1;
   }
 }
@@ -616,9 +668,11 @@ body {
   }
 }
 
-.project:hover > .project__title::before {
-  transform: scale(4.5, 2.4);
-  background-image: linear-gradient(to right, rgba(241, 70, 144, 0.9333333333) 0, rgba(241, 116, 70, 0.9333333333) 121px);
+@media screen and (min-width: 1440px) {
+  .project:hover > .project__title::before {
+    transform: scale(4.5, 2.4);
+    background-image: linear-gradient(to right, rgba(241, 70, 144, 0.9333333333) 0, rgba(241, 116, 70, 0.9333333333) 121px);
+  }
 }
 
 .footer {
@@ -646,16 +700,28 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 1440px) {
   .footer__content {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 4rem;
   }
 }
-.footer__info {
-  width: 400px;
+@media screen and (min-width: 1440px) {
+  .footer__info {
+    width: 400px;
+  }
+}
+.footer__logo {
+  width: 200px;
+}
+@media screen and (min-width: 1440px) {
+  .footer__logo {
+    width: 300px;
+  }
 }
 .footer__links {
   height: 120px;
@@ -674,10 +740,14 @@ body {
 }
 
 .form {
-  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .form {
+    width: 400px;
+  }
 }
 .form__input, .form__textarea {
   width: 100%;

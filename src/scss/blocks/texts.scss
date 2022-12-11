@@ -1,1 +1,9 @@
 @use '../mixins/responsive.scss' as*;
+
+.text {
+    font-size: 1.5rem;
+
+    &--link:hover {
+        text-decoration: underline;
+    }
+}

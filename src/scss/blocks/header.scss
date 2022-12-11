@@ -5,14 +5,19 @@
     margin-bottom: 6rem;
 
     &-content {
-        height: 80px;
+        height: 10rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
 
         @include responsive(tablet) {
             flex-direction: row;
             justify-content: space-between;
+        }
+
+        @include responsive(desktop) {
+            height: 80px;
         }
     }
 }

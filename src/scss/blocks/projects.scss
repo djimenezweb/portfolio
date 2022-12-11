@@ -12,7 +12,7 @@
     gap: 2.5rem;
 
     @include responsive(tablet) {
-        grid-template-columns: 342px 342px;
+        grid-template-columns: 300px 300px;
         gap: 1.5rem;
     }
 
@@ -70,13 +70,12 @@
 
     &__title {
         position: relative;
-        margin: 0 0 .5rem 0;
-
+        margin: 0 auto .5rem auto;
         padding: .5rem 2rem;
         border-radius: 0 2rem 2rem 0;
 
         @include responsive(desktop) {
-            margin-bottom: 1rem;
+            margin: 0 0 1rem 0;
             font-size: 2rem;
             transition: transform 300ms;
             position: relative;
@@ -94,27 +93,42 @@
         bottom: 0;
         left: 0;
         padding: .5rem 2rem;
-        border-radius: 0 2rem 2rem 0;
+        border-radius: 2rem;
         z-index: -1;
-        transform-origin: top left;
-        transition: transform 300ms;
+
+        @include responsive(desktop) {
+            border-radius: 0 2rem 2rem 0;
+            transform-origin: top left;
+            transition: transform 300ms;
+        }
     }
 
     &__links {
+        color: black;
+        margin-inline: auto;
+
         @include responsive(desktop) {
+            margin: 0;
             padding-left: 2rem;
             opacity: 0;
             transition: transform 300ms 150ms ease-in-out, opacity 300ms 150ms;
             position: relative;
             z-index: 1;
+            color: white;
         }
     }
 }
 
-.project:hover>.project__title,
-.project:hover>.project__links {
+.project:hover>.project__title {
     @include responsive(desktop) {
         transform: translateY(-1rem);
+        opacity: 1;
+    }
+}
+
+.project:hover>.project__links {
+    @include responsive(desktop) {
+        transform: translateY(-2rem);
         opacity: 1;
     }
 }
@@ -126,6 +140,8 @@
 }
 
 .project:hover>.project__title::before {
-    transform: scale(4.5, 2.4);
-    background-image: linear-gradient(to right, #f14690ee 0, #f17446ee 121px);
+    @include responsive(desktop) {
+        transform: scale(4.5, 2.4);
+        background-image: linear-gradient(to right, #f14690ee 0, #f17446ee 121px);
+    }
 }
